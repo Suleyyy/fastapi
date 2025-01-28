@@ -10,8 +10,7 @@ from sqlalchemy.orm import sessionmaker
 
 if os.getenv("ENVIRONMENT") == "production":
     SQLALCHEMY_DATABASE_URL = (
-        f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@"
-        f"{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+        f"postgresql://fastapi_database_xts7_user:zbAORtPfOby71jOiiKVfvHV2RWFDi8XT@dpg-cuccoc5ds78s73c1l8gg-a.frankfurt-postgres.render.com/fastapi_database_xts7"
     )
 else:
     SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
